@@ -1,0 +1,8 @@
+name: validate
+on: [push]
+jobs:
+  sigma:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: SigmaHQ/sigma-cli@v1

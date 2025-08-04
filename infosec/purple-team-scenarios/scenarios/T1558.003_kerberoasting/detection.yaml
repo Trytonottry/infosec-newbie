@@ -1,0 +1,9 @@
+title: Kerberoasting Service Ticket Request
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    ServiceName|endswith: '$'
+  condition: selection

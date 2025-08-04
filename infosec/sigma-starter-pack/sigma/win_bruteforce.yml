@@ -1,0 +1,10 @@
+title: Multiple Failed Logons
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+  timeframe: 5m
+  condition: selection | count() by IpAddress > 5
+level: medium

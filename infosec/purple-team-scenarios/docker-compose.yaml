@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  purple:
+    build: .
+    volumes:
+      - ./scenarios:/app/scenarios
+  elk:
+    image: sebp/elk:8.10.2
+    ports:
+      - "5601:5601"
